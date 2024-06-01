@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de la Vie - Background</title>
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <canvas id="gameOfLifeCanvas"></canvas>
+
+    <button class="settings_btn"><img src="settings.svg" alt="Paramètres"></button>
+    <div class="settings_box">
+        <h1>Jeu de la vie</h1>
+        <div>
+            <label for="cellSize">Taille des cases de la grille</label>
+            <input type="range" min="1" max="15" step="1" value="7" id="cellSize">
+        </div>
+        <div>
+            <label for="animationSpeed">Vitesse de l'animation (ms)</label>
+            <input type="range" min="50" max="1000" step="50" value="200" id="animationSpeed">
+        </div>
+        <div>
+            <label for="cellDeathThreshold">Seuil de mort des cellules (%)</label>
+            <input type="range" min="0" max="1" step="0.1" value="0.5" id="cellDeathThreshold">
+        </div>
+        <div>
+            <label for="template">Schéma de départ</label>
+            <select id="template">
+                <option selected value="random">Aléatoire</option>
+                <option value="glider">Glider</option>
+                <option value="block">Block</option>
+                <option value="beehive">Beehive</option>
+                <option value="blinker">Blinker</option>
+                <option value="toad">Toad</option>
+                <option value="gosperGliderGun">Gosper Glider Gun</option>
+            </select>
+        </div>
+        <button class="reload">Relancer</button>
+    </div>
+    <div class="background-modal"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
